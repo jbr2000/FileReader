@@ -52,7 +52,7 @@ do{
 cout<<"METADATA"<<endl<<"File: "<<fileName<<endl<<"Lines: "<<lineNum<<endl<<"Characters: "<<characters<<endl;
 
 
-cout<<"Anaylyze another file (y/n)?";
+cout<<"Analyze another file (y/n)?";
 cin>>repeat;
 
   
