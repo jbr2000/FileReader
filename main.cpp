@@ -6,6 +6,9 @@ using namespace std;
 
 int main()
 {
+char repeat;  
+do{
+  
   string fileName; //to get the name of the file to open
   string line; //to store a single line of a text file
   fstream fileStream; //to open a file for reading
@@ -13,7 +16,7 @@ int main()
   int lineNum=0;
 
   cout<<"What file do you want to open? ";
-  getline(cin, fileName);
+  cin>>fileName;
   fileStream.open(fileName.c_str(), ios::in);
   //STEP 1: open the fileStream for input, using the fileName specified
   
@@ -48,7 +51,12 @@ int main()
  }
 cout<<"METADATA"<<endl<<"File: "<<fileName<<endl<<"Lines: "<<lineNum<<endl<<"Characters: "<<characters<<endl;
 
+
+cout<<"Anaylyze another file (y/n)?";
+cin>>repeat;
+
   
 fileStream.close();
-  return 0;
+}while (repeat == 'y' || repeat =='Y'); 
+return 0;
 }
